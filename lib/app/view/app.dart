@@ -5,6 +5,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:firebase_auth_bloc/config/app_routes.dart';
 import 'package:firebase_auth_bloc/l10n/l10n.dart';
 import 'package:firebase_auth_bloc/screens/screens.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +17,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
+        appBarTheme: const AppBarTheme(color: Colors.indigo),
         colorScheme: ColorScheme.fromSwatch(
-          accentColor: const Color(0xFF13B9FF),
+          accentColor: Colors.indigo,
         ),
       ),
       localizationsDelegates: const [
@@ -27,7 +29,8 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const HomeScreen(),
+      onGenerateRoute: AppRouter.onGenerateRoute,
+      initialRoute: SplashScreen.routeName,
     );
   }
 }
