@@ -10,6 +10,14 @@ A Very Good Project created by Very Good CLI.
 
 ---
 
+# Architecture
+
+<img src="assets/Architecture.png" width="600">
+
+# Workflow
+
+<img src="assets/Workflow.png" width="600">
+
 ## Getting Started 🚀
 
 This project contains 3 flavors:

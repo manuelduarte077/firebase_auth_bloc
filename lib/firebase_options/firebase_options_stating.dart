@@ -59,7 +59,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '880566678229',
     projectId: 'my-awesome-login-flutter-bloc',
     storageBucket: 'my-awesome-login-flutter-bloc.appspot.com',
-    iosClientId: '880566678229-jk12nnmv1ljaas71j66lj97qs623ui4q.apps.googleusercontent.com',
+    iosClientId:
+        '880566678229-jk12nnmv1ljaas71j66lj97qs623ui4q.apps.googleusercontent.com',
     iosBundleId: 'com.manuelduarte077.loginbloc',
   );
 }
