@@ -41,6 +41,12 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
+  // Funcion para cerrar sesion
+  Future<void> signOut() async {
+    await _authRepository.signOut();
+    emit(AuthSignedOut());
+  }
+
   // Cerramos el estado
   @override
   Future<void> close() {
