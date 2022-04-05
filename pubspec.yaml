@@ -16,9 +16,11 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
+  flutter_hooks: ^0.18.2+1
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
+  page_indicator: ^0.4.1
 
 dev_dependencies:
   bloc_test: ^9.0.3

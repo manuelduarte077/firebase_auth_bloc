@@ -30,7 +30,7 @@ class App extends StatelessWidget {
       ],
       supportedLocales: AppLocalizations.supportedLocales,
       onGenerateRoute: AppRouter.onGenerateRoute,
-      initialRoute: SplashScreen.routeName,
+      initialRoute: IntroScreen.routeName,
     );
   }
 }

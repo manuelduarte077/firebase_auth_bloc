@@ -32,7 +32,7 @@ class AuthCubit extends Cubit<AuthState> {
 
       // Si el usuarios es nulo, que muestre el siguiente mensaje
       if (user == null) {
-        emit(AuthError('Unkown error,  try again later'));
+        emit(const AuthError('Unkown error,  try again later'));
       } else {
         emit(AuthSignedIn(user));
       }
@@ -65,7 +65,7 @@ class AuthSigningIn extends AuthState {}
 
 // En este estado cuando aya un error
 class AuthError extends AuthState {
-  AuthError(this.message);
+  const AuthError(this.message);
 
   final String message;
 
