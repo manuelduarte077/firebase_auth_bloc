@@ -5,4 +5,33 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-export 'view/app.dart';
+import 'package:firebase_auth_bloc/blocs/auth_cubit.dart';
+import 'package:firebase_auth_bloc/config/app_routes.dart';
+import 'package:firebase_auth_bloc/screens/screens.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
+  static Widget create() {
+    return BlocListener<AuthCubit, AuthState>(
+      listener: ((context, state) {}),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(color: Colors.indigo),
+        colorScheme: ColorScheme.fromSwatch(
+          accentColor: Colors.indigo,
+        ),
+      ),
+      onGenerateRoute: AppRouter.onGenerateRoute,
+      initialRoute: SplashScreen.routeName,
+    );
+  }
+}

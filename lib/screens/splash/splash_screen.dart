@@ -6,7 +6,7 @@ class SplashScreen extends StatelessWidget {
   static const String routeName = '/splash';
 
   static Route route() {
-    return MaterialPageRoute<dynamic>(
+    return MaterialPageRoute(
       settings: const RouteSettings(name: routeName),
       builder: (context) => const SplashScreen(),
     );

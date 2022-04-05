@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   static const String routeName = '/';
 
   static Route route() {
-    return MaterialPageRoute<dynamic>(
+    return MaterialPageRoute(
       settings: const RouteSettings(name: routeName),
       builder: (context) => const HomeScreen(),
     );
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 Text('Welcome ${authUser.displayName}'),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  child: Text('Sign Out'),
+                  child: const Text('Sign Out'),
                   onPressed: () {
                     context.read<AuthCubit>().signOut();
                   },

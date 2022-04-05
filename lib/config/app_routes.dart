@@ -18,7 +18,7 @@ class AppRouter {
   }
 
   static Route _errorRoute() {
-    return MaterialPageRoute<dynamic>(
+    return MaterialPageRoute(
       settings: const RouteSettings(name: '/error'),
       builder: (_) => const ErrorRoutes(),
     );

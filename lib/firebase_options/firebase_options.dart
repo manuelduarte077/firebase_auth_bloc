@@ -25,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -47,7 +44,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyB0lLRVHRn-KL8qi552U4_2r5Wj6G4vXno',
-    appId: '1:880566678229:android:867eed7db2dabb1c2ca85c',
+    appId: '1:880566678229:android:467ab455f97d25632ca85c',
     messagingSenderId: '880566678229',
     projectId: 'my-awesome-login-flutter-bloc',
     storageBucket: 'my-awesome-login-flutter-bloc.appspot.com',
@@ -55,12 +52,23 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyC7LrFDBQHWyLO3iPofzGti8FnYbjIOtto',
-    appId: '1:880566678229:ios:53ee71c4b14f2b062ca85c',
+    appId: '1:880566678229:ios:771db971a37296802ca85c',
     messagingSenderId: '880566678229',
     projectId: 'my-awesome-login-flutter-bloc',
     storageBucket: 'my-awesome-login-flutter-bloc.appspot.com',
     iosClientId:
-        '880566678229-jk12nnmv1ljaas71j66lj97qs623ui4q.apps.googleusercontent.com',
-    iosBundleId: 'com.manuelduarte077.loginbloc',
+        '880566678229-hierdl4s5b0f1391t3l6c6c3moep9me7.apps.googleusercontent.com',
+    iosBundleId: 'com.example.firebaseAuthBloc',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyC7LrFDBQHWyLO3iPofzGti8FnYbjIOtto',
+    appId: '1:880566678229:ios:771db971a37296802ca85c',
+    messagingSenderId: '880566678229',
+    projectId: 'my-awesome-login-flutter-bloc',
+    storageBucket: 'my-awesome-login-flutter-bloc.appspot.com',
+    iosClientId:
+        '880566678229-hierdl4s5b0f1391t3l6c6c3moep9me7.apps.googleusercontent.com',
+    iosBundleId: 'com.example.firebaseAuthBloc',
   );
 }
