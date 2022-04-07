@@ -26,8 +26,9 @@ class HomeScreen extends StatelessWidget {
           final authUser = (state as AuthSignedIn).user;
           return Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Welcome ${authUser.displayName}'),
+                Text('Welcome ${authUser.uid}'),
                 const SizedBox(height: 20),
                 ElevatedButton(
                   child: const Text('Sign Out'),
