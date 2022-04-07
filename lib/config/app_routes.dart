@@ -2,7 +2,7 @@ import 'package:firebase_auth_bloc/screens/screens.dart';
 import 'package:firebase_auth_bloc/utils/error_route.dart';
 import 'package:flutter/material.dart';
 
-class AppRouter {
+class AppRoute {
   static Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/':

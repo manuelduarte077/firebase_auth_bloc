@@ -17,13 +17,16 @@ class AuthCubit extends Cubit<AuthState> {
         _authRepository.onAuthStateChanged.listen(_authStateChanged);
   }
 
-  // ignore: lines_longer_than_80_chars
   void _authStateChanged(AuthUser? user) =>
       user == null ? emit(AuthSignedOut()) : emit(AuthSignedIn(user));
 
   // Funcion para iniciar sesion anonimamente
   Future<void> signInAnonymously() =>
       _signIn(_authRepository.singnInAnonymously());
+
+  // Funcion para iniciar sesion con Google
+  Future<void> signInWithGoogle() =>
+      _signIn(_authRepository.signInWithGoogle());
 
   Future<void> _signIn(Future<AuthUser?> authUser) async {
     try {
