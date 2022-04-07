@@ -39,7 +39,7 @@ class LogingPage extends StatelessWidget {
               children: [
                 _LoginButton(
                   text: 'Sign in with Google',
-                  onTap: () {},
+                  onTap: () => context.read<AuthCubit>().signInWithGoogle(),
                   color: Colors.white,
                   textColor: Colors.grey,
                   image: 'https://logo.clearbit.com/google.com?size=200',
@@ -64,9 +64,7 @@ class LogingPage extends StatelessWidget {
                 const SizedBox(height: 20),
                 _LoginButton(
                   text: 'Sign in with Anonymous',
-                  onTap: () {
-                    context.read<AuthCubit>().signInAnonymously();
-                  },
+                  onTap: () => context.read<AuthCubit>().signInAnonymously(),
                   color: Colors.deepPurple,
                   textColor: Colors.white,
                   image: 'https://logo.clearbit.com/anonymous.com?size=200',

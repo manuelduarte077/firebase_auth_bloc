@@ -22,6 +22,8 @@ abstract class AuthRepositoryBase {
 
   Future<AuthUser?> singnInAnonymously(); // Para usuarios anónimos
 
+  Future<AuthUser?> signInWithGoogle(); // Para usuarios con Google
+
   Future<void> signOut(); // para cerra sesión
 
 }

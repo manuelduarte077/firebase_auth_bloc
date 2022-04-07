@@ -4,12 +4,12 @@
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:firebase_auth_bloc/blocs/auth_cubit.dart';
 import 'package:firebase_auth_bloc/config/app_routes.dart';
 import 'package:firebase_auth_bloc/screens/screens.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 final _navigatorKey = GlobalKey<NavigatorState>();
 
