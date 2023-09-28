@@ -46,35 +46,11 @@ class LogingPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 _LoginButton(
-                  text: 'Sign in with Facebook',
-                  onTap: () {},
-                  color: Colors.blueAccent,
-                  textColor: Colors.white,
-                  image: 'https://logo.clearbit.com/facebook.com?size=200',
-                ),
-                const SizedBox(height: 20),
-                _LoginButton(
-                  text: 'Sign in with Email',
-                  onTap: () {},
-                  color: Colors.redAccent,
-                  textColor: Colors.white,
-                  image:
-                      'https://cdn.icon-icons.com/icons2/1826/PNG/512/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png?size=200',
-                ),
-                const SizedBox(height: 20),
-                _LoginButton(
                   text: 'Sign in with Anonymous',
                   onTap: () => context.read<AuthCubit>().signInAnonymously(),
                   color: Colors.deepPurple,
                   textColor: Colors.white,
-                  image: 'https://logo.clearbit.com/anonymous.com?size=200',
-                ),
-                const SizedBox(height: 20),
-                OutlinedButton(
-                  child: const Text('Create an account'),
-                  onPressed: () {
-                    print('Create an account');
-                  },
+                  image: 'https://logo.clearbit.com/firebase.com?size=200',
                 ),
               ],
             ),
@@ -107,7 +83,7 @@ class _LoginButton extends StatelessWidget {
       color: color,
       elevation: 5,
       borderRadius: const BorderRadius.all(Radius.circular(10)),
-      child: InkWell(
+      child: GestureDetector(
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.all(8.0),

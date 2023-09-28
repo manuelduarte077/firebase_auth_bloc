@@ -64,7 +64,6 @@ abstract class AuthEvent extends Equatable {
 }
 
 // Estdos de inicialización
-
 class AuthInitialState extends AuthState {}
 
 class AuthSignedOut extends AuthState {}
@@ -87,7 +86,7 @@ class AuthError extends AuthState {
 class AuthSignedIn extends AuthState {
   final AuthUser user;
 
-  AuthSignedIn(this.user);
+  const AuthSignedIn(this.user);
 
   @override
   List<Object> get props => [user];

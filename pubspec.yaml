@@ -1,12 +1,12 @@
 name: firebase_auth_bloc
 description: A new Flutter project.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.16.1 <3.0.0'
+  sdk: ">=2.16.1 <3.0.0"
 
 dependencies:
   bloc: ^8.1.2

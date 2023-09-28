@@ -6,7 +6,7 @@ class AuthUser extends Equatable {
   final String? displayName;
   final String? photoUrl;
 
-  AuthUser({
+  const AuthUser({
     required this.uid,
     this.email,
     this.displayName,
@@ -25,5 +25,4 @@ abstract class AuthRepositoryBase {
   Future<AuthUser?> signInWithGoogle(); // Para usuarios con Google
 
   Future<void> signOut(); // para cerra sesión
-
 }
