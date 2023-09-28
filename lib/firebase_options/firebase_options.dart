@@ -25,7 +25,20 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+              'you can reconfigure this by running the FlutterFire CLI again.',
+        );
+      case TargetPlatform.windows:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+              'you can reconfigure this by running the FlutterFire CLI again.',
+        );
+      case TargetPlatform.linux:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for linux - '
+              'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -34,41 +47,28 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCvk7oLgnwMHyWbgIWgjzX9P_M4_1p0c1s',
-    appId: '1:880566678229:web:4ab8327c5b0e5d952ca85c',
-    messagingSenderId: '880566678229',
-    projectId: 'my-awesome-login-flutter-bloc',
-    authDomain: 'my-awesome-login-flutter-bloc.firebaseapp.com',
-    storageBucket: 'my-awesome-login-flutter-bloc.appspot.com',
+    apiKey: 'AIzaSyBu8H64O0m1q0kTt85djED7K6Xq_KJJs5I',
+    appId: '1:399602322284:web:98e66c2688ef9337928149',
+    messagingSenderId: '399602322284',
+    projectId: 'fir-auth-f49a7',
+    authDomain: 'fir-auth-f49a7.firebaseapp.com',
+    storageBucket: 'fir-auth-f49a7.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB0lLRVHRn-KL8qi552U4_2r5Wj6G4vXno',
-    appId: '1:880566678229:android:467ab455f97d25632ca85c',
-    messagingSenderId: '880566678229',
-    projectId: 'my-awesome-login-flutter-bloc',
-    storageBucket: 'my-awesome-login-flutter-bloc.appspot.com',
+    apiKey: 'AIzaSyDUKYxEOsGbXi7nGCDVU_dSscHDyiau7gk',
+    appId: '1:399602322284:android:df81bb7a28efa28d928149',
+    messagingSenderId: '399602322284',
+    projectId: 'fir-auth-f49a7',
+    storageBucket: 'fir-auth-f49a7.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC7LrFDBQHWyLO3iPofzGti8FnYbjIOtto',
-    appId: '1:880566678229:ios:771db971a37296802ca85c',
-    messagingSenderId: '880566678229',
-    projectId: 'my-awesome-login-flutter-bloc',
-    storageBucket: 'my-awesome-login-flutter-bloc.appspot.com',
-    iosClientId:
-        '880566678229-hierdl4s5b0f1391t3l6c6c3moep9me7.apps.googleusercontent.com',
-    iosBundleId: 'com.example.firebaseAuthBloc',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyC7LrFDBQHWyLO3iPofzGti8FnYbjIOtto',
-    appId: '1:880566678229:ios:771db971a37296802ca85c',
-    messagingSenderId: '880566678229',
-    projectId: 'my-awesome-login-flutter-bloc',
-    storageBucket: 'my-awesome-login-flutter-bloc.appspot.com',
-    iosClientId:
-        '880566678229-hierdl4s5b0f1391t3l6c6c3moep9me7.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDQ6fhdRIEp-QpQ5YvUAl3lMl4ybwY_GG0',
+    appId: '1:399602322284:ios:af9ad77f73bfd1b5928149',
+    messagingSenderId: '399602322284',
+    projectId: 'fir-auth-f49a7',
+    storageBucket: 'fir-auth-f49a7.appspot.com',
     iosBundleId: 'com.example.firebaseAuthBloc',
   );
 }
