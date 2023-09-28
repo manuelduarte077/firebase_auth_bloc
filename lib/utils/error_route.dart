@@ -20,7 +20,7 @@ class ErrorRoutes extends StatelessWidget {
           },
         ),
       ),
-      body: Stack(
+      body: const Stack(
         children: [
           Positioned(
             top: 0,
@@ -29,7 +29,7 @@ class ErrorRoutes extends StatelessWidget {
             right: 24,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Text(
                   '404',
                   textAlign: TextAlign.center,
